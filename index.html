@@ -465,6 +465,58 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
+        <form class="modal-form">
+          <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+          <div class="modal-field">
+            <label class="modal-label" for="user-name">Ім'я</label>
+            <input
+              type="text"
+              class="modal-input"
+              name="user-name"
+              id="user-name"
+              autofocus
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label class="modal-label" for="user-tel">Телефон</label>
+            <input
+              type="tel"
+              class="modal-input"
+              name="user-tel"
+              id="user-tel"
+              title="+380 (96) 111-11-11"
+            />
+          </div>
+          <div class="modal-field">
+            <label class="modal-label" for="user-email">Пошта</label>
+            <input type="email" class="modal-input" name="user-email" id="user-email" />
+          </div>
+          <div class="modal-field">
+            <label class="modal-label" for="comment-text">Коментар</label>
+            <textarea
+              class="modal-text"
+              name="comment-text"
+              id="comment-text"
+              placeholder="Введіть текст"
+            ></textarea>
+          </div>
+
+          <div class="form-group" role="group" aria-labelledby="newsletter-head">
+            <label class="modal-label flex" for="accept">
+              <input
+                class="modal-checkbox"
+                type="checkbox"
+                name="accept"
+                value="accept"
+                id="accept"
+              />
+              Погоджуюся з розсилкою та приймаю
+            </label>
+            <a href="" class="checkbox-offer link"> Умови договору</a>
+          </div>
+          <button class="modal-button" type="submit">Відправити</button>
+        </form>
         <button class="modal-close" data-modal-close>
           <svg class="close" width="12" height="12">
             <use href="./images/studio/svg/sprint.svg#icon-modal-close"></use>
