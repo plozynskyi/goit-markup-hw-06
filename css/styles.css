@@ -615,6 +615,7 @@ img {
 
 .singup-area {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
@@ -643,9 +644,10 @@ img {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px 32px;
+  padding: 10px 28px;
   min-width: 200px;
   align-items: center;
+  justify-content: space-between;
   color: var(--button-color);
   background-color: var(--button-color-accent);
   cursor: pointer;
