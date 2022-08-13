@@ -472,7 +472,7 @@
                 class="input-email"
                 placeholder="E-mail"
               />
-              <button class="online-button" type="submit">
+              <button class="modal-button" type="submit">
                 Підписатися
                 <svg class="online-btn-svg" width="24" height="24">
                   <use href="./images/studio/svg/sprint.svg#icon-icon-send"></use>
@@ -513,6 +513,7 @@
                 name="user-tel"
                 id="user-tel"
                 title="+380 (96) 111-11-11"
+                required
               />
               <svg class="input-icon" width="18" height="18">
                 <use href="./images/studio/svg/sprint.svg#icon-modal-phone"></use>
@@ -522,7 +523,7 @@
           <div class="modal-field">
             <label class="modal-label" for="user-email">Пошта</label>
             <div class="input-wrap">
-              <input type="email" class="modal-input" name="user-email" id="user-email" />
+              <input type="email" class="modal-input" name="user-email" id="user-email" required />
               <svg class="input-icon" width="18" height="18">
                 <use href="./images/studio/svg/sprint.svg#icon-modal-email"></use>
               </svg>
@@ -537,7 +538,7 @@
               placeholder="Введіть текст"
             ></textarea>
           </div>
-          <div class="form-group" role="group" aria-labelledby="newsletter-head">
+          <div class="form-group">
             <input
               class="modal-checkbox visually-hidden"
               type="checkbox"
