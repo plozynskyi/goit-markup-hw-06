@@ -37,7 +37,7 @@
               <a class="header-nav-link link curent" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="header-nav-item">
-              <a class="header-nav-link link" href="./contacts.html">Контакти</a>
+              <a class="header-nav-link link" href="#contacts">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -310,7 +310,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="container footer-container">
         <div class="container-adress">
           <!-- Адрес -->
@@ -340,7 +340,7 @@
         </div>
         <!-- СОЦ СЕТИ -->
         <div class="container-social">
-          <h3 class="social-title">Приєднуйтесь</h3>
+          <p class="social-title">Приєднуйтесь</p>
           <ul class="social-list list">
             <li class="social-item">
               <a href="./" class="footer-social-link">
@@ -371,6 +371,27 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-online">
+          <form class="online-form">
+            <p class="social-title">Підпишіться на розсилку</p>
+            <div class="singup-area">
+              <input
+                type="email"
+                name="singup-email"
+                id="footer-input-email"
+                class="input-email"
+                placeholder="E-mail"
+                required
+              />
+              <button class="online-button" type="submit">
+                Підписатися
+                <svg class="online-btn-svg" width="24" height="24">
+                  <use href="./images/studio/svg/sprint.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
