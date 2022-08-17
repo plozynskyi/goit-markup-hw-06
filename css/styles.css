@@ -11,12 +11,22 @@
   --page-bg-color: #ffffff;
   --team-bg-color: #f5f4fa;
   --footer-bg-color: #2f303a;
-  --border-color: #eeeeee;
+  --border-color-white: #eeeeee;
   --button-filter-bg-color: #f5f4fa;
   --logo-accent-color-tomato: #00f8d0;
   --hedaer-line-color: #ececec;
   --feature-icon-bg-color: #f5f4fa;
+  --modal-input-color-: #555555;
+  --social-link-color: #afb1b8;
   --gap-size: 30px;
+  --transition-fill: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-opacity: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-transform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-background-color: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-border: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-border-color: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-box-shadow: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -95,7 +105,7 @@ img {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .logo-colorized {
@@ -105,7 +115,7 @@ img {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .logo-header:hover .logo-colorized,
@@ -157,7 +167,7 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .header-auth-nav {
@@ -184,7 +194,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .header-auth-link:hover,
@@ -202,7 +212,7 @@ img {
 .auth-nav-icon {
   fill: var(--secondery-text-color);
   margin-right: 10px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-fill);
 }
 
 .header-nav-item {
@@ -236,8 +246,7 @@ img {
   border-radius: 2px;
   opacity: 0;
   transform: scale(0);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-opacity), var(--transition-transform);
 }
 
 .header-nav-link:hover::after,
@@ -306,7 +315,7 @@ img {
   line-height: 1.88;
   letter-spacing: 0.06em;
   font-family: inherit;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-background-color);
 }
 
 .section-hero-button:hover,
@@ -477,10 +486,9 @@ img {
   height: 44px;
   border: 0;
   border-radius: 50%;
-  color: #afb1b8;
+  color: var(--social-link-color);
   background-color: var(--page-bg-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color), var(--transition-background-color);
 }
 
 .social-logo {
@@ -526,16 +534,16 @@ img {
   outline: transparent;
   width: 170px;
   height: 92px;
-  color: #afb1b8;
+  color: var(--social-link-color);
   background-color: var(--page-bg-color);
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--social-link-color);
   border-radius: 4px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border), var(--transition-color);
 }
 
 .link-client-logo {
   fill: currentColor;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-fill);
 }
 
 .clients-list-item:hover .link-client-logo,
@@ -571,19 +579,20 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   outline: transparent;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .address-text {
   display: block;
   margin-bottom: 9px;
+  width: 231px;
 
   color: var(--white-text-color);
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .address-text:hover,
@@ -601,7 +610,7 @@ img {
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .footer-contact-item:hover,
@@ -610,7 +619,7 @@ img {
 }
 
 .footer-online {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .online-form {
@@ -641,7 +650,7 @@ img {
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border-color);
 }
 
 .input-email:focus {
@@ -653,14 +662,15 @@ img {
 }
 
 .online-button {
-  position: relative;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
   margin-left: auto;
   margin-right: auto;
   padding: 10px 28px;
   min-width: 200px;
-  align-items: center;
-  justify-content: space-between;
   color: var(--button-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -672,8 +682,7 @@ img {
   line-height: 1.88;
   letter-spacing: 0.06em;
   font-family: inherit;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-background-color), var(--transition-box-shadow);
 }
 
 .online-button:hover,
@@ -684,10 +693,6 @@ img {
 }
 
 .online-btn-svg {
-  position: absolute;
-  top: 50%;
-  transform: translatey(-50%);
-  right: 28px;
   fill: var(--button-color);
 }
 
@@ -710,8 +715,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
 
   transform: scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-transform), var(--transition-opacity);
 }
 
 .backdrop.is-hidden .modal-window {
@@ -744,10 +748,10 @@ img {
   padding: 0;
   width: 30px;
   height: 30px;
-  color: #000000;
+  color: var(--logo-color-text);
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-fill), var(--transition-border);
   border-radius: 50%;
   cursor: pointer;
   outline: transparent;
@@ -786,10 +790,10 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 12px 12px 42px;
-  color: #555555;
+  color: var(--modal-input-color-);
   font-size: 12px;
   line-height: 1.16;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border-color);
 }
 
 .input-wrap {
@@ -802,7 +806,7 @@ img {
   left: 12px;
   top: 50%;
   transform: translatey(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-fill);
 }
 
 .modal-input:focus {
@@ -851,7 +855,7 @@ img {
   resize: none;
   padding: 12px 16px;
   outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border-color);
 }
 
 .modal-text::placeholder {
@@ -881,7 +885,7 @@ img {
 
   margin: 0;
   padding: 0;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .label-checkbox span {
@@ -892,18 +896,18 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .check-icon {
   display: inline-block;
   fill: transparent;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-fill);
 }
 
 .modal-checkbox:checked + .label-checkbox .check-icon {
   fill: var(--white-text-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-fill);
 }
 
 .modal-checkbox:checked + .label-checkbox span {
@@ -957,8 +961,7 @@ img {
   letter-spacing: 0.06em;
   font-family: inherit;
   outline: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-background-color), var(--transition-box-shadow);
 }
 
 .modal-button:hover,
@@ -970,7 +973,7 @@ img {
 /* ---------------FOOTER-SOCIAL--------------- */
 
 .container-social {
-  margin-left: 70px;
+  margin-left: auto;
 }
 
 .social-title {
@@ -994,7 +997,7 @@ img {
   border-radius: 50%;
   color: var(--button-color);
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-background-color);
 }
 
 .footer-social-link:hover,
@@ -1030,9 +1033,8 @@ img {
   border-radius: 4px;
   cursor: pointer;
   outline: transparent;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color), var(--transition-background-color),
+    var(--transition-box-shadow);
 }
 
 .button-list:hover,
@@ -1069,7 +1071,7 @@ img {
   display: block;
   color: var(--primary-text-color);
   cursor: pointer;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-box-shadow);
 }
 
 .overlay-text {
@@ -1081,7 +1083,7 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
   transform: translatey(101%);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-transform);
 
   padding: 63px 24px;
   color: var(--white-text-color);
@@ -1114,7 +1116,7 @@ img {
   padding: 20px 24px;
   border-width: 0 1px 1px;
   border-style: solid;
-  border-color: #eeeeee;
+  border-color: var(--border-color-white);
   border-top: 0;
 }
 
